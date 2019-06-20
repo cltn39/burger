@@ -18,9 +18,9 @@ app.get("/", (req,res) => {
 
 app.post("/api/burgers", (req, res) => {
     burger.create([
-        'name', 'sleepy'
+        'burger_name', 'devoured'
     ], [
-        req.body.name, req.body.sleepy
+        req.body.burger_name, req.body.devoured
     ], (result) => {
         res.json({ id: result.insertId});
     });
@@ -32,7 +32,7 @@ app.put("/api/burgers/:id", (req, res) => {
     console.log('condition', condition);
 
     burger.update({
-        sleepy: req.body.sleepy}, condition, (result) => {
+        devoured: req.body.devoured}, condition, (result) => {
             if (result.changedRows ==0) {
                 return res.status(404).end();
             } else {
