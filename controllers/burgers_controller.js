@@ -20,7 +20,7 @@ app.post("/api/burgers", (req, res) => {
     burger.create([
         "burger_name"
     ], [
-        req.body.name
+        req.body.burger_name
     ], (result) => {
         res.json({
             id: result.insertId
