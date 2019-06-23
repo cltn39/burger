@@ -26,5 +26,5 @@ app.use(express.static("public"));
 // Syncing our sequelize models and then starting our Express app
 app.listen(PORT, function () {
     // Log (server-side) when our server has started
-    console.log(`Server listening on: http://localhost:${PORT}`);
+    console.log(`Server listening on: ${PORT}`);
 });
