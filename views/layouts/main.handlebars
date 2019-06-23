@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<title>MVC With Burgers!</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/assets/js/cats.js"></script>
+
+	<head>
+		<meta charset="UTF-8">
+		{{!-- googlefont --}}
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+		{{!-- css --}}
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="/assets/css/burger_style.css">
+		<title>Eat da burger</title>
 	</head>
-	<body>
-		{{{ body }}}
-	</body>
+
+<body>
+	<img src="/assets/img/burgerImg.png" width="400px" id="img_burger">
+	{{!-- <img src="/assets/img/burgerSide.png" width="300px" id="leftSide_burger">
+	<img src="/assets/img/burgerSide.png" width="300px" id="rightSide_burger"> --}}
+	{{{ body }}}
+	<footer class="burgerFooter">
+		<div class="footer-copyright">
+			<div class="container">
+				<span class="grey-text text-lighten-4">© 2019</span>
+				<a class="grey-text text-lighten-4 right" href="https://github.com/cltn39">Reference Work</a>
+			</div>
+		</div>
+	</footer>
+</body>
+
 </html>

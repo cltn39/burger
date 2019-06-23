@@ -1,0 +1,106 @@
+html {
+    background-color: #FFC04C;
+}
+
+body {
+    width: 75%;
+    margin: 0 auto;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+}
+
+#img_burger {
+    display: block;
+    margin: auto;
+}
+/* #rightSide_burger {
+    display: block;
+    
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    margin-left: 60vw
+}
+#leftSide_burger {
+    display: block;
+    
+} */
+
+p {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+}
+h1 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 70px;
+    margin: 50px;
+}
+
+.burgerAvailable {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+
+    border-radius: 25px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #b7ffc2;
+    border: none;
+}
+
+.burgerAvailable:hover {
+    background-color: #81ff94;
+}
+
+.burgerEaten {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #ffd1c9;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    margin: 50px;
+}
+
+.formContainer {
+    background-color: orange;
+}
+
+.addBurgerButton {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+
+    width: 80%;
+    margin: 0;
+    padding: 10px;
+}
+
+.addBurgerButton:active {
+    background-color: rgb(28, 88, 165);
+}
+
+.burgerFooter {
+    background-color: #FFC04C;
+    padding: 20px 0;
+}
+
+.input {
+    text-align: center;
+}
