@@ -97,10 +97,8 @@ h2 {
 }
 
 .burgerFooter {
+    text-align: center;
     background-color: #FFC04C;
     padding: 20px 0;
 }
 
-.input {
-    text-align: center;
-}
