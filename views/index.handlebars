@@ -4,11 +4,12 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
+            <label>To be Eaten:</label>
             {{#each burgers}}
             {{#unless this.devoured}}
             <div>
-                <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
-                    <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
+                <form {{!-- action="/burgers/{{this.id}}?_method=PUT" method="POST" --}}>
+                    <button type="submit" class='burgerAvailable' data-id="{{id}}"> {{this.burger_name}} </button>
                 </form>
             </div>
             {{/unless}}
@@ -16,11 +17,13 @@
         </div>
 
         <div class="col-sm-6">
+            <label>Eaten:</label>
             {{#each burgers}}
             {{#if this.devoured}}
             <div class='burgerEaten'>
                 <div>
                     {{this.burger_name}}
+                    <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
                 </div>
             </div>
             {{/if}}
@@ -29,14 +32,12 @@
     </div>
 </div>
 
-<br><br>
-
-<div class="row center">
-    <div class="col-sm-12">
-        <form class="input">
-            <textarea id="name" name="burger_name" rows="3" cols="40"></textarea>
-            <button type="submit" class="addBurgerButton btn btn-primary">Submit</button>
-            <P class="center">Enter a burger you want to eat click the "submit" button</P>
-        </form>
+<form class="create-form">
+    <div class="form-group">
+        <input type="text" id="bu" name="name">
+    <button type="submit" class="btn btn-primary">Submit</button>
     </div>
-</div>
+</form>
+    <P class="center">Enter a burger you want to eat click the "submit" button</P>
+
+    

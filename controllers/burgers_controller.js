@@ -3,10 +3,10 @@ const express = require('express');
 const app = express.Router();
 
 //Import models
-const burger = require('../models/burger');
+const burger = require("../models/burger.js");
 
 //Routes
-app.get("/", (req,res) => {
+app.get("/", (req, res) => {
     burger.all((data) => {
         let hbsObject = {
             burgers: data
@@ -18,34 +18,38 @@ app.get("/", (req,res) => {
 
 app.post("/api/burgers", (req, res) => {
     burger.create([
-        'burger_name', 'devoured'
+        "burger_name"
     ], [
-        req.body.burger_name, req.body.devoured
+        req.body.name
     ], (result) => {
-        res.json({ id: result.insertId});
+        res.json({
+            id: result.insertId
+        });
     });
 });
 
 app.put("/api/burgers/:id", (req, res) => {
     const condition = `id = ${req.params.id}`;
 
-    console.log('condition', condition);
+    console.log("condition", condition);
 
     burger.update({
-        devoured: req.body.devoured}, condition, (result) => {
-            if (result.changedRows ==0) {
-                return res.status(404).end();
-            } else {
-                res.status(200).end();
-            }
-        });
+        devoured: true
+    }, condition, (result) => {
+        if (result.changedRows == 0) {
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
+    });
 });
 
-app.delete("/api/burgers/:id", (req, res) => {
-    const condition = `id = ${req.params.id}`;
+app.delete("/api/burgers/:id", function (req, res) {
+    var condition = "id = " + req.params.id;
 
-    burger.delete(condition, (result) => {
+    burger.delete(condition, function (result) {
         if (result.affectedRows == 0) {
+            // If no rows were changed, then the ID must not exist, so 404
             return res.status(404).end();
         } else {
             res.status(200).end();

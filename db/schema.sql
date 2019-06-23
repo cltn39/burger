@@ -9,11 +9,4 @@ CREATE TABLE burgers (
     PRIMARY KEY (id)
 );
 
-CREATE TABLE beverages (
- id INTEGER NOT NULL AUTO_INCREMENT,
-    beverage_name VARCHAR(60) NOT NULL,
-    devoured BOOLEAN DEFAULT FALSE,
-    burger_id INT NOT NULL,
-    PRIMARY KEY (id)
-);
 
